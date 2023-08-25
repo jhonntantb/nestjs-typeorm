@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import { ItemsModule } from './items/items.module';
+import { ItemSubscriber } from './items/item.subscriber';
 
 @Module({
   imports: [
@@ -10,6 +11,6 @@ import { ItemsModule } from './items/items.module';
     ItemsModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [ItemSubscriber],
 })
 export class AppModule {}
