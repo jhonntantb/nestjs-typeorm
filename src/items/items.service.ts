@@ -21,6 +21,7 @@ export class ItemsService {
     });
     const item = new Item({
       ...createItemDto,
+      comments: [],
       listing,
     });
     await this.entityManager.save(item);
